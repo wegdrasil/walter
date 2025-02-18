@@ -1,43 +1,125 @@
 <!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="utf-8">
-        <title>Walter</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
 
-        <style>
-            body {
-                max-width: 50rem;
-                font-family: tahoma;
-                margin:auto;
-                border-style:dashed;
-            }
-            p {color:blue; border-style:dotted;}    
-            div {
-                border-style:dotted;
-                display: flex;
-                justify-content: center;
-            }
-        </style>
+    <style>
+        body {
+            background-color: #F9F7F7;
+            margin: 0;
+            padding: 0;
+        }
 
-    </head>
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+        }
 
-    <body style="background-color:darksalmon">
-        <h1>Sklep wielobranżowy Walter</h1>
+        #pasek {
+            background-color: #112D4E;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #DBE2EF;
+            /* width: 100%; */
+            height: 64px;
+            padding: 0.25rem 2rem;
+        }
+
+        #who {
+            align-self: center;
+        }
+
+        #map {
+            align-self: center;
+        }
+
+        /**/
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #353535;
+            font-size: 3rem;
+            color: #fff;
+            box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+            height: 100%;
+            width: 100%;
+            border-radius: 4px;
+            transition: all 500ms;
+            overflow: hidden;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+  
+        .card:hover {
+            box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .basic-grid {
+            display: grid;
+            gap: 2rem;
+
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-auto-rows: 240px;
+            /* grid-template-rows: repeat(4, 25%); */
+
+            margin: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav id="pasek">
+        <a href="https://wegdrasil.github.io/walter/"><img src="resources/img/logo.jpg" width="128" height="64"></a>
+        <div style="justify-content: flex-end;">
+            <a href="produkty.html">Oferta</a>
+            <a href="">Kontakt</a>
+            <a href="">Szukaj</a>
+        </div>
+
+    </nav>
+
+    <main>
+        <article id="who">
+            <!-- <p> Kim jesteśmy. Co robimy. Jak możemy pomóc.</p> -->
+                <img src="resources/img/baner.jpg">
+        </article>
         
-        <p>Hello world!</p>
-        <hr>
-        <h1>Chapter 2</h1>
-        <a href="produkty.html">Produkty</a>
-        <div>       
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil perspiciatis odio voluptatum mollitia nemo distinctio perferendis, nesciunt aut alias reprehenderit praesentium atque nostrum rem laboriosam, adipisci quae eius iste sed.
-        </div>
+        <!-- <p>3? najważniejsze produkty</p> -->
+        <section class="basic-grid">
+            <div class="card"><a href="produkty.html">Produkty</a>1</div>
+            <div class="card"><img src="resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg">2</div>
+            <div class="card"><img src="resources/img/kenny-eliason-60krlMMeWxU-unsplash.jpg">3</div>
+            <div class="card"><img src="resources/img/ryan-song-0ZN-fZOyV7c-unsplash.jpg">1</div>
+            <div class="card"><img src="resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg">2</div>
+            <div class="card"><img src="resources/img/kenny-eliason-60krlMMeWxU-unsplash.jpg">3</div>
+            <div class="card"><img src="resources/img/ryan-song-0ZN-fZOyV7c-unsplash.jpg">1</div>
+            <div class="card"><img src="resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg">2</div>
 
-        <div class="container">
-            <div class="item item-1">Item 1</div>
-            <div class="item item-2">Item 2</div>
-            <div class="item item-3">Item 3</div>
+
+        </section>
+
+        <!-- <p> wasze zdjęcie - 30 lat doświadczenia</p> -->
+
+        <!-- <p>odwiedź nas - mapa google - call to action</p> -->
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1515.9878669335283!2d23.17596078404532!3d54.24977637490416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e0e1a559151451%3A0x90b23f10ac6c670b!2sWalter!5e1!3m2!1spl!2spl!4v1739881037590!5m2!1spl!2spl" width=720 height=480 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </body>
+    </main>
+
+    <footer>stopka</footer>
+</body>
 </html>
-
-<!-- <svg></svg> -->

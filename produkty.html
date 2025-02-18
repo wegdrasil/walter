@@ -3,35 +3,41 @@
     <head>
         <meta charset="utf-8">
         <title>Hello</title>
-        
+        <style>
+            /* body { margin: 0; } */
+            main {
+                display: grid;
+                grid-template-areas: 
+                " t t t "
+                " l m r "
+                " b b b ";
+                grid-template-columns: auto;
+                grid-template-rows: 50px auto 70px;
+                gap:2rem;
+            }
+
+            header { grid-area: t; }
+            article { grid-area: m; }
+            aside { grid-area: l; }
+            nav { grid-area: r; }
+            footer { grid-area: b; }
+        </style>
     </head>
 
     <body style="background-color:darksalmon">
-        <h1>Chapter 1</h1>
-        <h2>Things 1</h2>
-        <p>Hello world!</p>
-        <hr>
-        <h1>Chapter 2</h1>
+        <main>
+            <header>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut nam itaque enim, sed qui eum doloribus, assumenda beatae modi, corporis veritatis obcaecati illo molestias quas. Natus impedit accusamus dolorem tempore!</header>
 
-        <img src="resources/img/photo_ks-11.jpg">
-
-        <div id="container" style="width: 400px">
-            <div id="header" style="background-color: DodgerBlue;">
-                <h1 style="margin-bottom: 0;">Nagłówek</h1>
-            </div>
-            <div id="menu" style="background-color: LightSkyBlue; height: 200px; width: 100px; float: left;">
-                <b>Menu</b><br>
-                Opcja 1<br>
-                Opcja 2<br>
-                Opcja 3
-            </div>
-            <div id="content" style="background-color: Azure;
-            height: 200px; width: 300px; float: left;">
-            Zawartość</div>
-            <div id="footer" style="background-color: DeepSkyBlue;
-            clear: both; text-align: center;">
-            Stopka</div>
-        </div>
-
+            <article>
+                <img src="resources/img/photo_ks-11.jpg" width="512" height="512">
+            </article>
+            <aside>
+                <img src="resources/img/ryan-song-0ZN-fZOyV7c-unsplash.jpg">
+            </aside>
+            <nav>
+                <img src="resources/img/kenny-eliason-60krlMMeWxU-unsplash.jpg">
+            </nav>
+            <footer>Footer</footer>
+        </main>
     </body>
 </html>
