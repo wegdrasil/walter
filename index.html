@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
 
     <style>
+        .theme {
+            --pallete-color-0 : #F9F7F7; 
+            --pallete-color-1 : #DBE2EF;
+            --pallete-color-2 : #3F72AF;
+            --pallete-color-3 : #112D4E;
+        }
+
         body {
-            background-color: #F9F7F7;
+            background-color: var(--pallete-color-0);
             margin: 0;
             padding: 0;
+            font-family: system-ui;
         }
 
         main {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            /* width: 100%; */
             
-            margin-top: 0px;
-            margin-right: auto;
-            margin-bottom: 0px;
-            margin-left: auto;
+            max-width: 50%;
+            /* margin:auto; */
+
+            margin: 0 auto;
+
         }
 
         #pasek {
-            background-color: #112D4E;
+            background-color: var(--pallete-color-3);
             display:flex;
             justify-content: space-between;
             align-items: center;
-            color: #DBE2EF;
+            color: var(--pallete-color-1);
             /* width: 100%; */
             height: 64px;
             padding: 0.25rem 2rem;
         }
 
+        #pasek a{
+            color: var(--pallete-color-1);
+            text-decoration:none;
+        }
+
+        #pasek a:hover{
+            color: #9196a0;
+            text-decoration:underline;
+        }
+        
+
         #who {
             align-self: center;
+            margin:1rem;
         }
 
         #map {
@@ -48,7 +69,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #353535;
+            background: var(--pallete-color-3);
             font-size: 3rem;
             color: #fff;
             box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
@@ -57,10 +78,10 @@
             border-radius: 4px;
             transition: all 500ms;
             overflow: hidden;
-
+/* 
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; */
         }
   
         .card:hover {
@@ -81,43 +102,83 @@
 
     </style>
 </head>
-<body>
+<body class="theme">
     <nav id="pasek">
         <a href="https://wegdrasil.github.io/walter/"><img src="resources/img/logo.jpg" width="128" height="64"></a>
         <div style="justify-content: flex-end;">
             <a href="produkty.html">Oferta</a>
             <a href="">Kontakt</a>
             <a href="">Szukaj</a>
+            <a>5161397</a>
         </div>
 
     </nav>
 
     <main>
-        <article id="who">
-            <!-- <p> Kim jesteśmy. Co robimy. Jak możemy pomóc.</p> -->
-                <img src="resources/img/baner.jpg">
-        </article>
+            <article id="who">
+                <!-- <p> Kim jesteśmy. Co robimy. Jak możemy pomóc.</p> -->
+                    <img style="max-inline-size: 100%;" src="resources/img/baner.jpg">
+            </article>
         
-        <!-- <p>3? najważniejsze produkty</p> -->
-        <section class="basic-grid">
-            <div class="card"><a href="produkty.html">Produkty</a>1</div>
-            <div class="card"><img src="resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg">2</div>
-            <div class="card"><img src="resources/img/kenny-eliason-60krlMMeWxU-unsplash.jpg">3</div>
-            <div class="card"><img src="resources/img/ryan-song-0ZN-fZOyV7c-unsplash.jpg">1</div>
-            <div class="card"><img src="resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg">2</div>
-            <div class="card"><img src="resources/img/kenny-eliason-60krlMMeWxU-unsplash.jpg">3</div>
-            <div class="card"><img src="resources/img/ryan-song-0ZN-fZOyV7c-unsplash.jpg">1</div>
-            <div class="card"><img src="resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg">2</div>
+        
+        <div style="background-color: var(--pallete-color-1);">
+
+            <h1 style="text-align: center;">Oferta</h1>
+            <!-- <p>3? najważniejsze produkty</p> -->
+            <section class="basic-grid">
+                <a href="nasiona.html">
+                    <div class="card" style="background-image: url(resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg);  background-repeat: no-repeat">
+                        <p style="background-color: rgba(0, 0, 0, 0.2);">Nasiona</p>
+                    </div>
+                </a>
+
+                <a href="produkty.html">
+                    <div class="card" style="background-image: url(resources/img/kenny-eliason-60krlMMeWxU-unsplash.jpg);  background-repeat: no-repeat">
+                        <p style="background-color: rgba(0, 0, 0, 0.2);">Narzędzia</p>
+                    </div>
+                </a>
+
+                <a href="produkty.html">
+                    <div class="card" style="background-image: url(resources/img/ryan-song-0ZN-fZOyV7c-unsplash.jpg);  background-repeat: no-repeat">
+                        <p style="background-color: rgba(0, 0, 0, 0.2);">Krowy</p>
+                    </div>
+                </a>
+
+                <a href="nasiona.html">
+                    <div class="card" style="background-image: url(resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg);  background-repeat: no-repeat">
+                        <p style="background-color: rgba(0, 0, 0, 0.2);">Nasiona</p>
+                    </div>
+                </a>
+
+                <a href="produkty.html">
+                    <div class="card" style="background-image: url(resources/img/kenny-eliason-60krlMMeWxU-unsplash.jpg);  background-repeat: no-repeat">
+                        <p style="background-color: rgba(0, 0, 0, 0.2);">Narzędzia</p>
+                    </div>
+                </a>
+
+                <a href="produkty.html">
+                    <div class="card" style="background-image: url(resources/img/ryan-song-0ZN-fZOyV7c-unsplash.jpg);  background-repeat: no-repeat">
+                        <p style="background-color: rgba(0, 0, 0, 0.2);">Krowy</p>
+                    </div>
+                </a>
 
 
-        </section>
+            </section>
+        </div>
 
         <!-- <p> wasze zdjęcie - 30 lat doświadczenia</p> -->
 
         <!-- <p>odwiedź nas - mapa google - call to action</p> -->
+         
+        <h1 style="text-align: center;">Zapraszamy</h1>
         <div id="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1515.9878669335283!2d23.17596078404532!3d54.24977637490416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e0e1a559151451%3A0x90b23f10ac6c670b!2sWalter!5e1!3m2!1spl!2spl!4v1739881037590!5m2!1spl!2spl" width=720 height=480 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
+
+        <!-- <div style="background-image: url(resources/img/jodie-righos-qPHHt-JTf5s-unsplash.jpg);">
+            <p style="margin: 1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolore eum officiis, itaque optio, odit facilis soluta voluptatibus impedit explicabo dignissimos quaerat quasi esse nihil rerum quam, ad ipsa iste.</p>
+        </div> -->
     </main>
 
     <footer>stopka</footer>
